@@ -13,8 +13,8 @@ export default function Home() {
         apiBaseUrl={
           process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://127.0.0.1:8080"
         }
-        titleText="WebLangChain 🦜🔗"
-        placeholder="Ask anything..."
+        titleText="Fintellection Chat"
+        placeholder="Your personal AI financial analyst"
       ></ChatWindow>
     </ChakraProvider>
   );
