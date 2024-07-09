@@ -1,8 +1,28 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "nextjs/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/main.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/nextjs/index.html"
+    }
+  ],
   "git": {
     "deploymentEnabled": {
       "main": false
     }
-  },
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  }
 }
